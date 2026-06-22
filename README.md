@@ -19,7 +19,7 @@ Instead of a slow `for` loop that hits the database 200,000 times, the `seed.js`
  Execution Timers: The API response includes a `meta.executionTime` field to prove the query resolves in milliseconds.
  Graceful Error Handling: Invalid or tampered base64 cursors return a clean `400 Bad Request` instead of crashing the server.
 
-## 🛠️ Tech Stack
+##  Tech Stack
  Node.js / Express
  PostgreSQL (Neon)
  `pg` driver
