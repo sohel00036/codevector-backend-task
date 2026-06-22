@@ -9,7 +9,6 @@ async function seedDatabase() {
 
   const categories = ['Electronics', 'Clothing', 'Home', 'Books', 'Beauty'];
   
-  // Generating arrays to pass to PostgreSQL unnest() for high-speed bulk insertion
   const names = [];
   const cats = [];
   const prices = [];
@@ -20,7 +19,6 @@ async function seedDatabase() {
     cats.push(categories[i % categories.length]);
     prices.push((Math.random() * 500 + 5).toFixed(2));
     
-    // Stagger timestamps backward so we have old and new items
     const date = new Date();
     date.setMinutes(date.getMinutes() - i);
     timestamps.push(date);
